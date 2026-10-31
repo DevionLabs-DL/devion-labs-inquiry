@@ -1,0 +1,174 @@
+/* Layout and base typography, scoped to the form root. */
+.dvn,
+.dvn *,
+.dvn *::before,
+.dvn *::after {
+  box-sizing: border-box;
+}
+
+.dvn {
+  font-family: var(--dvn-font);
+  font-size: var(--dvn-text-md);
+  line-height: var(--dvn-leading);
+  color: var(--dvn-ink);
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+}
+
+.dvn [hidden] {
+  display: none !important;
+}
+
+.dvn-shell {
+  max-width: var(--dvn-max-width);
+  margin: 0 auto;
+  padding: var(--dvn-space-8);
+  background: var(--dvn-surface);
+  border: var(--dvn-border-width) solid var(--dvn-border);
+  border-radius: var(--dvn-radius-lg);
+  box-shadow: var(--dvn-shadow);
+}
+
+.dvn-header {
+  margin-bottom: var(--dvn-space-6);
+}
+
+.dvn-title {
+  margin: 0 0 var(--dvn-space-2);
+  font-size: var(--dvn-text-2xl);
+  font-weight: var(--dvn-weight-bold);
+  line-height: var(--dvn-leading-tight);
+  letter-spacing: -0.01em;
+}
+
+.dvn-intro {
+  margin: 0 0 var(--dvn-space-2);
+  color: var(--dvn-ink-muted);
+  max-width: 40rem;
+}
+
+.dvn-legend-note {
+  margin: 0;
+  font-size: var(--dvn-text-sm);
+  color: var(--dvn-ink-muted);
+}
+
+.dvn-form {
+  margin: 0;
+}
+
+.dvn-step {
+  margin-top: var(--dvn-space-6);
+}
+
+.dvn-step__heading {
+  margin: 0 0 var(--dvn-space-2);
+  font-size: var(--dvn-text-xl);
+  font-weight: var(--dvn-weight-bold);
+  line-height: var(--dvn-leading-tight);
+}
+
+.dvn-step__heading:focus {
+  outline: none;
+}
+
+.dvn-step__heading:focus-visible {
+  outline: 2px solid var(--dvn-focus);
+  outline-offset: 4px;
+  border-radius: var(--dvn-radius-sm);
+}
+
+.dvn-step__intro {
+  margin: 0 0 var(--dvn-space-5);
+  color: var(--dvn-ink-muted);
+}
+
+.dvn-subheading {
+  margin: 0 0 var(--dvn-space-4);
+  font-size: var(--dvn-text-lg);
+  font-weight: var(--dvn-weight-bold);
+}
+
+.dvn-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--dvn-space-5);
+}
+
+.dvn-actions {
+  display: flex;
+  gap: var(--dvn-space-3);
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--dvn-space-8);
+  padding-top: var(--dvn-space-6);
+  border-top: var(--dvn-border-width) solid var(--dvn-border);
+}
+
+.dvn-actions .dvn-btn--primary {
+  margin-left: auto;
+}
+
+.dvn-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.dvn-hp {
+  display: none !important;
+}
+
+.dvn-muted {
+  color: var(--dvn-ink-muted);
+}
+
+.dvn-prewrap {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Subtle step transition; disabled for users who prefer reduced motion. */
+.dvn-step--enter {
+  animation: dvn-enter var(--dvn-duration) ease-out both;
+}
+
+.dvn-reveal {
+  animation: dvn-fade var(--dvn-duration) ease-out both;
+}
+
+@keyframes dvn-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes dvn-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dvn *,
+  .dvn *::before,
+  .dvn *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

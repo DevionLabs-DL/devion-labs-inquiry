@@ -1,0 +1,23 @@
+/* Standalone page chrome only — not included in the GoDaddy HTML-section build. */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem 3rem;
+  background: #f5f7fb;
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 0;
+    background: #ffffff;
+  }
+}
+
+/* When embedded in an iframe the host page supplies the frame. */
+body.dvn-embedded {
+  padding: 0;
+  background: transparent;
+}

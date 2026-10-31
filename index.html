@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      Content Security Policy (defense in depth; Handbook §10.2 item 10).
+      connect-src allows only the Forminit endpoint. If the host can send real
+      HTTP headers, prefer a header CSP and add frame-ancestors there
+      (frame-ancestors is ignored in a meta tag).
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://forminit.com; form-action 'none'; base-uri 'self'; object-src 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="noindex" />
+    <title>Project Inquiry — Devion Labs</title>
+    <meta name="description" content="Tell Devion Labs about your software project and request a consultation." />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/page.css" />
+    <script type="module" src="js/embed-mode.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <main>
+      <div data-devion-inquiry>
+        <noscript>
+          <p>
+            This form needs JavaScript. Please email
+            <a href="mailto:admin@devion-labs.com">admin@devion-labs.com</a> with your project details instead.
+          </p>
+        </noscript>
+      </div>
+    </main>
+  </body>
+</html>

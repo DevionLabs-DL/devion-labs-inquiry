@@ -1,0 +1,68 @@
+/*
+ * Theme tokens. All styles are scoped under .dvn so the form never leaks into
+ * (or inherits surprises from) the host page. To re-brand, change these values
+ * only. No permanent brand identity is implied by these defaults.
+ * Contrast: text and accent tokens meet WCAG 2.2 AA (≥ 4.5:1) on --dvn-surface.
+ */
+.dvn {
+  /* Colour */
+  --dvn-ink: #0f1729;
+  --dvn-ink-muted: #556074;
+  --dvn-surface: #ffffff;
+  --dvn-surface-alt: #f5f7fb;
+  --dvn-surface-sunken: #eef1f7;
+  --dvn-border: #d5dbe6;
+  --dvn-border-strong: #9aa4b6;
+  --dvn-accent: #2b4fd8;
+  --dvn-accent-hover: #2140b8;
+  --dvn-accent-soft: #eaf0ff;
+  --dvn-accent-ink: #ffffff;
+  --dvn-error: #b42318;
+  --dvn-error-soft: #fef3f2;
+  --dvn-warning: #93370d;
+  --dvn-warning-soft: #fffaeb;
+  --dvn-success: #067647;
+  --dvn-success-soft: #ecfdf3;
+  --dvn-focus: #2b4fd8;
+
+  /* Typography */
+  --dvn-font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --dvn-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --dvn-text-xs: 0.8125rem;
+  --dvn-text-sm: 0.875rem;
+  --dvn-text-md: 1rem;
+  --dvn-text-lg: 1.125rem;
+  --dvn-text-xl: 1.375rem;
+  --dvn-text-2xl: 1.75rem;
+  --dvn-weight-regular: 400;
+  --dvn-weight-medium: 550;
+  --dvn-weight-bold: 700;
+  --dvn-leading: 1.55;
+  --dvn-leading-tight: 1.25;
+
+  /* Spacing (4px scale) */
+  --dvn-space-1: 0.25rem;
+  --dvn-space-2: 0.5rem;
+  --dvn-space-3: 0.75rem;
+  --dvn-space-4: 1rem;
+  --dvn-space-5: 1.25rem;
+  --dvn-space-6: 1.5rem;
+  --dvn-space-8: 2rem;
+  --dvn-space-10: 2.5rem;
+  --dvn-space-12: 3rem;
+
+  /* Borders, radius, shadow */
+  --dvn-border-width: 1px;
+  --dvn-radius-sm: 6px;
+  --dvn-radius: 10px;
+  --dvn-radius-lg: 14px;
+  --dvn-radius-pill: 999px;
+  --dvn-shadow-sm: 0 1px 2px rgb(15 23 41 / 0.06);
+  --dvn-shadow: 0 1px 3px rgb(15 23 41 / 0.08), 0 4px 16px rgb(15 23 41 / 0.06);
+  --dvn-shadow-lg: 0 10px 40px rgb(15 23 41 / 0.1);
+
+  /* Layout */
+  --dvn-max-width: 52rem;
+  --dvn-touch: 44px; /* WCAG 2.2 target size, comfortably above the 24px minimum */
+  --dvn-duration: 180ms;
+}

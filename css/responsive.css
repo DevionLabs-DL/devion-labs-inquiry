@@ -1,0 +1,73 @@
+/* Tablet */
+@media (max-width: 760px) {
+  .dvn-shell {
+    padding: var(--dvn-space-6) var(--dvn-space-5);
+  }
+
+  .dvn-progress__label {
+    font-size: var(--dvn-text-xs);
+  }
+
+  .dvn-review__dl {
+    grid-template-columns: 1fr;
+    gap: 0 var(--dvn-space-4);
+  }
+
+  .dvn-review__dl dd {
+    margin-bottom: var(--dvn-space-3);
+  }
+}
+
+/* Mobile: single column, full-width touch targets, no horizontal overflow */
+@media (max-width: 560px) {
+  .dvn-shell {
+    padding: var(--dvn-space-5) var(--dvn-space-4);
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
+  }
+
+  .dvn-title {
+    font-size: var(--dvn-text-xl);
+  }
+
+  .dvn-cards,
+  .dvn-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .dvn-progress {
+    gap: var(--dvn-space-1);
+  }
+
+  .dvn-progress__label {
+    display: none;
+  }
+
+  .dvn-progress__item--current .dvn-progress__label {
+    display: inline;
+  }
+
+  .dvn-panel {
+    padding: var(--dvn-space-4);
+  }
+
+  .dvn-group__body {
+    padding: var(--dvn-space-4) var(--dvn-space-4) 0;
+  }
+
+  .dvn-badge {
+    display: none;
+  }
+
+  .dvn-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .dvn-actions .dvn-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
